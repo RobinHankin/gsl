@@ -41,47 +41,39 @@ static void init()
 
 double f_wrapper(const gsl_vector *v, void *params)
 {
+	double result;
 	SEXP state = params;
-	SEXP f_body = findVar(install("f"), state);
-	SEXP rho = findVar(install("rho"), state);
-	SEXP x = vector_R_from_gsl(v);
-
-	PROTECT(x);
+	SEXP f_body = PROTECT(findVar(install("f"), state));
+	SEXP rho = PROTECT(findVar(install("rho"), state));
+	SEXP x = PROTECT(vector_R_from_gsl(v));
 	defineVar(install("x"), x, rho);
-	UNPROTECT(1);
-
-	return REAL(eval(f_body, rho))[0];
+	result = REAL(eval(f_body, rho))[0];
+	UNPROTECT(3);
 }
 
 void df_wrapper(const gsl_vector *v, void *params, gsl_vector *df)
 {
 	SEXP state = params;
-	SEXP df_body = findVar(install("df"), state);
-	SEXP rho = findVar(install("rho"), state);
-	SEXP x = vector_R_from_gsl(v);
-
-	PROTECT(x);
+	SEXP df_body = PROTECT(findVar(install("df"), state));
+	SEXP rho = PROTECT(findVar(install("rho"), state));
+	SEXP x = PROTECT(vector_R_from_gsl(v));
 	defineVar(install("x"), x, rho);
-	UNPROTECT(1);
-
 	vector_assign_gsl_from_R(df, eval(df_body, rho));
+	UNPROTECT(3);
 }
 
 void fdf_wrapper(const gsl_vector *v, void *params, double *f, gsl_vector *df)
 {
 	SEXP state = params;
-	SEXP fdf_body = findVar(install("fdf"), state);
-	SEXP rho = findVar(install("rho"), state);
-	SEXP x = vector_R_from_gsl(v);
+	SEXP fdf_body = PROTECT(findVar(install("fdf"), state));
+	SEXP rho = PROTECT(findVar(install("rho"), state));
+	SEXP x = PROTECT(vector_R_from_gsl(v));
 	SEXP result;
-
-	PROTECT(x);
 	defineVar(install("x"), x, rho);
-
 	PROTECT(result = eval(fdf_body, rho));
 	*f = REAL(findVar(install("f"), result))[0];
 	vector_assign_gsl_from_R(df, findVar(install("df"), result));
-	UNPROTECT(2);
+	UNPROTECT(4);
 }
 
 void free_ptr(SEXP s)
@@ -137,15 +129,18 @@ SEXP multimin_f_new(SEXP state, SEXP x, SEXP method, SEXP step_size)
 	f_->params = state;
 
 	ptr = R_MakeExternalPtr(gsl_state, mkChar("gsl_state"), state);
+	PROTECT(ptr);
 	R_RegisterCFinalizer(ptr, free_fmin_ptr);
 	setVar(install("gsl_state"), ptr, state);
 
 	ptr = R_MakeExternalPtr(f_, mkChar("gsl_function"), state);
+	PROTECT(ptr);
 	R_RegisterCFinalizer(ptr, free_ptr);
 	setVar(install("f_wrapper_ref"), ptr, state);
 
 	gsl_multimin_fminimizer_set(gsl_state, f_, vector_gsl_from_R(x),
 				    vector_gsl_from_R(step_size));
+	UNPROTECT(2);
 	return state;
 }
 
@@ -186,15 +181,18 @@ SEXP multimin_fdf_new(SEXP state, SEXP x, SEXP method, SEXP step_size,
 	f_->params = state;
 
 	ptr = R_MakeExternalPtr(gsl_state, mkChar("gsl_state"), state);
+	PROTECT(ptr);
 	R_RegisterCFinalizer(ptr, free_fmin_ptr);
 	setVar(install("gsl_state"), ptr, state);
 
 	ptr = R_MakeExternalPtr(f_, mkChar("gsl_function"), state);
+	PROTECT(ptr);
 	R_RegisterCFinalizer(ptr, free_ptr);
 	setVar(install("f_wrapper_ref"), ptr, state);
 
 	gsl_multimin_fdfminimizer_set(gsl_state, f_, vector_gsl_from_R(x),
 				    REAL(step_size)[0], REAL(tol)[0]);
+	UNPROTECT(2);
 	return state;
 }
 
@@ -237,16 +235,24 @@ SEXP multimin_restart(SEXP state)
 
 SEXP multimin_f_state_argmin(SEXP state)
 {
+	SEXP result;
 	gsl_multimin_fminimizer *gsl_state;
 	gsl_state = R_ExternalPtrAddr(findVar(install("gsl_state"), state));
-	return vector_R_from_gsl(gsl_state->x);
+	PROTECT(gsl_state);
+	result = vector_R_from_gsl(gsl_state->x);
+	UNPROTECT(1);
+	return result;
 }
 
 SEXP multimin_fdf_state_argmin(SEXP state)
 {
+	SEXP result;
 	gsl_multimin_fdfminimizer *gsl_state;
 	gsl_state = R_ExternalPtrAddr(findVar(install("gsl_state"), state));
-	return vector_R_from_gsl(gsl_state->x);
+	PROTECT(gsl_state);
+	result = vector_R_from_gsl(gsl_state->x);
+	UNPROTECT(1);
+	return result;
 }
 
 SEXP multimin_f_state_min(SEXP state)
@@ -273,8 +279,12 @@ SEXP multimin_fdf_state_min(SEXP state)
 
 SEXP multimin_fdf_state_grad(SEXP state)
 {
+	SEXP result;
 	gsl_multimin_fdfminimizer *gsl_state;
 	gsl_state = R_ExternalPtrAddr(findVar(install("gsl_state"), state));
-	return vector_R_from_gsl(gsl_state->gradient);
+	PROTECT(gsl_state);
+	result = vector_R_from_gsl(gsl_state->gradient);
+	UNPROTECT(1);
+	return result;
 }
 
