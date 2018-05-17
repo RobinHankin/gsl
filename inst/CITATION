@@ -1,0 +1,25 @@
+citHeader("To cite in publications use:")
+
+citEntry(entry = "Article",
+	 title = {
+             paste("Special functions in R: introducing the gsl package")
+	     },
+	 author = personList(
+         person(given = c("Robin", "K. S."),
+		family = "Hankin",
+		email="hankin.robin@gmail.com")),
+	 journal = "R News",
+         year = "2006",
+	 month = "October",
+	 volume = "6",
+	 issue = "4",
+	 textVersion = {
+             paste("R. K. S. Hankin",
+                   "2006.",
+                   "Special functions in R: introducing the gsl package. ",
+	     	   "R News",
+		   "6(4)"
+		   )
+         })
+
+

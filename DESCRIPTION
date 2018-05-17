@@ -1,0 +1,14 @@
+Package: gsl
+Version: 2.1-3
+Depends: R (>= 3.1.0)
+Date: 28-07-2016
+Title: Wrapper for the Gnu Scientific Library
+Author: Robin K. S. Hankin; qrng functions by Duncan Murdoch and
+ multimin by Andrew Clausen
+SystemRequirements: Gnu Scientific Library version >= 2.1
+Description: 
+ An R wrapper for some of the functionality of the
+ Gnu Scientific Library.
+Maintainer: Robin K. S. Hankin <hankin.robin@gmail.com>
+License: GPL-3
+
