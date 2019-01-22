@@ -11,4 +11,5 @@ Description:
  Gnu Scientific Library.
 Maintainer: Robin K. S. Hankin <hankin.robin@gmail.com>
 License: GPL-3
-
+URL: https://github.com/RobinHankin/gsl.git
+BugReports: https://github.com/RobinHankin/gsl/issues
