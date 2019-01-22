@@ -7,3 +7,8 @@ as the example program near the start of the gsl Reference Manual.
 Some linux users report that is is possoble to go to the Ubuntu
 Software Center and install "GNU Scientific Library (GSL) --
 development package", which has the name "libgsl0-dev".
+
+If the gsl R package builds successfully but will not load, make sure
+to inform your system linker/loader where to find the GSL libraries
+used to compile it.  That step may be missed when using a manual GSL
+installation as opposed to one performed by a package manager.
