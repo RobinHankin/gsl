@@ -49,6 +49,7 @@ double f_wrapper(const gsl_vector *v, void *params)
 	defineVar(install("x"), x, rho);
 	result = REAL(eval(f_body, rho))[0];
 	UNPROTECT(3);
+	return 0;
 }
 
 void df_wrapper(const gsl_vector *v, void *params, gsl_vector *df)
