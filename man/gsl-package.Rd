@@ -7,20 +7,14 @@
   Wrappers for the Gnu Scientific Library
 }
 \description{
-  An \R wrapper for the special functions and quasi random number
-  generators of the Gnu Scientific Library
-  (\url{http://www.gnu.org/software/gsl/})
+\packageDescription{gsl}
 }
 \details{
-\tabular{ll}{
-Package: \tab gsl\cr
-Type: \tab Package\cr
-Version: \tab 1.8-3\cr
-Date: \tab 2007-05-23\cr
-License: \tab gsl\cr
-}
+The DESCRIPTION file:
+\packageDESCRIPTION{gsl}
+\packageIndices{gsl}
 
-  The function naming scheme directly copies the \acronym{GSL} manual except that
+ The function naming scheme directly copies the \acronym{GSL} manual except that
   leading \code{gsl_sf_} and, if present, the trailing \code{_e} is
   stripped: thus \code{gsl_sf_Airy_Ai_e} goes to \R function
   \code{airy_Ai()}; however, some functions retain the prefix to avoid
@@ -44,13 +38,11 @@ License: \tab gsl\cr
   (June 1964).
 }
 \author{
-  \itemize{
-    \item Robin K. S. Hankin (special functions)
-    \item Martin Maechler (quasi random sequences, \code{Qrng.Rd})
-    \item Andrew Clausen (function minimization, \code{Multimin.Rd})
-  }
-Maintainer:  <hankin.robin@gmail.com>
+\packageAuthor{gsl}
+
+Maintainer: \packageMaintainer{gsl}
 }
+
 \references{
   \itemize{
     \item M. Abramowitz and I. A. Stegun 1965. \emph{Handbook of
