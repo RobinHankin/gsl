@@ -1,8 +1,10 @@
 Package: gsl
 Version: 2.1-4
 Depends: R (>= 3.1.0)
-Date: 28-07-2016
 Title: Wrapper for the Gnu Scientific Library
+Authors@R: c(person(given=c("Robin", "K. S."), family="Hankin", role = c("aut","cre"), email="hankin.robin@gmail.com", comment = c(ORCID = "0000-0001-5982-0415")),
+             person(given="Andrew",family="Clausen",role="ctb",comment="qrng functions"),
+             person(given="Duncan",family="Murdoch",role="ctb",comment="multimin functionality"))
 Author: Robin K. S. Hankin; qrng functions by Duncan Murdoch and
  multimin by Andrew Clausen
 SystemRequirements: Gnu Scientific Library version >= 2.1
