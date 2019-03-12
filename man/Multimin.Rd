@@ -7,6 +7,10 @@
 \alias{multimin.fminimizer.size}
 \title{Function minimization} 
 \description{
+
+  \emph{These functions have been removed from the package temporarily,
+    pending a permanent fix.}
+  
   Function minimization using the Gnu Scientific Library, reference
   manual section 35.  These functions are declared in header file
   \code{gsl_multimin.h}
@@ -113,6 +117,7 @@ of the following items:
   on \code{WIN32}; under windows there is a slight memory leak.}
 \examples{
 # The Rosenbrock function:
+\donttest{
 x0 <- c(-1.2, 1)
 f <- function(x) (1 - x[1])^2 + 100 * (x[2] - x[1]^2)^2
 df <- function(x) c(-2*(1 - x[1]) + 100 * 2 * (x[2] - x[1]^2) * (-2*x[1]),
@@ -127,5 +132,6 @@ state <- multimin.init(x0, f, df, method="conjugate-fr")
 for (i in 1:200)
 	state <- multimin.iterate(state)
 print(state$x)
+}
 }
 \keyword{array}

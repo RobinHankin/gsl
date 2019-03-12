@@ -5,8 +5,11 @@
 
 #dyn.load("gsl.so")
 
+# These functions have been temporarily removed pending a permanent fix
+
+
 multimin <- function(..., prec=0.0001)
-{
+{stop("These functions have been temporarily removed pending a permanent fix")
 	is.converged <- function(state, old.x)
 	{
 		if (state$method == "nm")
@@ -29,7 +32,7 @@ multimin <- function(..., prec=0.0001)
 }
 
 multimin.init <- function(x, f, df=NA, fdf=NA, method=NA, step.size=NA, tol=NA)
-{
+{stop("These functions have been temporarily removed pending a permanent fix")
 
         multimin.method.names <-
           list(
@@ -131,7 +134,7 @@ multimin.init <- function(x, f, df=NA, fdf=NA, method=NA, step.size=NA, tol=NA)
 }
 
 multimin.iterate <- function(state)
-{
+{stop("These functions have been temporarily removed pending a permanent fix")
 	internal.state <- state$internal.state
 	if (state$is.fdf) {
 		state$code <- .Call("multimin_fdf_iterate", internal.state)
@@ -147,7 +150,7 @@ multimin.iterate <- function(state)
 }
 
 multimin.restart <- function(state)
-{
+{stop("These functions have been temporarily removed pending a permanent fix")
 	if (state$is.fdf)
 		.Call("multimin_restart", state$internal.state)
 	state
@@ -155,7 +158,7 @@ multimin.restart <- function(state)
 
 # Convergence criterion for Nelder-Mead
 multimin.fminimizer.size <- function(state)
-{
+{stop("These functions have been temporarily removed pending a permanent fix")
 	stopifnot(!state$is.fdf)
 	.Call("multimin_fminimizer_size", state$internal.state)
 }
