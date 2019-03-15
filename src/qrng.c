@@ -27,9 +27,10 @@ SEXP qrng_alloc(SEXP type, SEXP dimension)
 	default:
 		error("unknown QRNG type");
 	};
-	dimension = AS_INTEGER(dimension);
+	PROTECT(dimension = AS_INTEGER(dimension));
 	result = R_MakeExternalPtr(gsl_qrng_alloc(T, (unsigned int)asInteger(dimension)),
 				   dimension, R_NilValue);
+	UNPROTECT(1);
 	R_RegisterCFinalizer(result, cleanup);
 	return result;
 }  
@@ -42,7 +43,8 @@ SEXP qrng_clone(SEXP r)
 	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)EXTPTR_PTR(r))) 
 		error("not a QRNG generator");
 	result = R_MakeExternalPtr(gsl_qrng_clone(gen),
-				   duplicate(EXTPTR_TAG(r)), R_NilValue);
+				   PROTECT(duplicate(EXTPTR_TAG(r))), R_NilValue);
+	UNPROTECT(1);
 	R_RegisterCFinalizer(result, cleanup);
 	return result;
 }

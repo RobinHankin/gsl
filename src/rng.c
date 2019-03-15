@@ -96,7 +96,8 @@ SEXP rng_clone(SEXP r) {
 	gen = get_rng_from_sexp(r);
 	
 	result = R_MakeExternalPtr(gsl_rng_clone(gen),
-				   duplicate(EXTPTR_TAG(r)), R_NilValue);
+				   PROTECT(duplicate(EXTPTR_TAG(r))), R_NilValue);
+	UNPROTECT(1);
 	R_RegisterCFinalizer(result, rng_cleanup);
 
 	return result;
