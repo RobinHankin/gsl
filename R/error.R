@@ -91,10 +91,10 @@
   }
 }
 
-"log_erf_Z" <- function(x, mode=0, give=FALSE, strict=TRUE){
+"erf_Z" <- function(x, mode=0, give=FALSE, strict=TRUE){
   x.vec <- as.vector(x)
   attr <- attributes(x)
-  jj <- .C("erf_e",
+  jj <- .C("erf_Z_e",
            as.double(x.vec),
            as.integer(length(x.vec)),
            as.integer(mode),

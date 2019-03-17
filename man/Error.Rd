@@ -7,6 +7,7 @@
 \alias{log_erfc}
 \alias{log_erf_Z}
 \alias{erf_Q}
+\alias{erf_Z}
 \alias{hazard}
 \title{Error functions}
 \description{
@@ -18,7 +19,6 @@
 erf(x, mode=0, give=FALSE, strict=TRUE)
 erfc(x, mode=0, give=FALSE, strict=TRUE)
 log_erfc(x, mode=0, give=FALSE, strict=TRUE)
-log_erf_Z(x, mode=0, give=FALSE, strict=TRUE)
 erf_Q(x, mode=0, give=FALSE, strict=TRUE)
 hazard(x, mode=0, give=FALSE, strict=TRUE)
 }

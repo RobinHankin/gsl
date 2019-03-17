@@ -1,5 +1,5 @@
 Package: gsl
-Version: 2.1-5
+Version: 2.1-6
 Depends: R (>= 3.1.0)
 Title: Wrapper for the Gnu Scientific Library
 Authors@R: c(person(given=c("Robin", "K. S."), family="Hankin", role = c("aut","cre"), email="hankin.robin@gmail.com", comment = c(ORCID = "0000-0001-5982-0415")),

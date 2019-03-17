@@ -44,7 +44,7 @@ void log_erfc_e(const double *x, const int *len, int *mode, double *val, double 
 	}
 }  
 
-void log_erf_Z_e(const double *x, const int *len, int *mode, double *val, double *err, int *status)
+void erf_Z_e(const double *x, const int *len, int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -57,7 +57,7 @@ void log_erf_Z_e(const double *x, const int *len, int *mode, double *val, double
 	}
 }  
 
-void log_erf_Q_e(const double *x, const int *len, int *mode, double *val, double *err, int *status)
+void erf_Q_e(const double *x, const int *len, int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -77,7 +77,7 @@ void hazard_e(const double *x, const int *len, int *mode, double *val, double *e
 	gsl_set_error_handler_off();
   
 	for(i = 0; i< *len ; i++){
-		status[i] = gsl_sf_erf_Q_e(x[i], &result) ;
+		status[i] = gsl_sf_hazard_e(x[i], &result) ;
 		val[i] = result.val;
 		err[i] = result.err;
 	}
