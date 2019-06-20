@@ -2638,7 +2638,7 @@ int main() {
    if ((sscanf(gslv, "%d.%d", &major, &minor)) != 2) {
      exit (1);
    }
-   exit (minor < 1);
+   exit (minor < 5);
    exit (major < 2);
 #else
   exit(1);
