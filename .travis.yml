@@ -2,7 +2,7 @@
 
 before_install:
     - gem install rake
-    - sudo apt-get install libgsl0-dev
+    - sudo apt-get install libgsl-dev
     - sudo apt-get install make cmake gcc git libcurl4-openssl-dev    
 
 language: R
