@@ -1,0 +1,6 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+.gitignore
+README.Rmd
+README.html
+^\.travis\.yml$
