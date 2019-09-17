@@ -11,7 +11,6 @@
 \title{Special functions in \proglang{R}: introducing the \pkg{gsl} package}
 %\VignetteIndexEntry{A vignette for the gsl package}
 %% for pretty printing and a nice hypersummary also set:
-%% \Plainauthor{Achim Zeileis, Second Author} %% comma-separated
 \Plaintitle{Special functions in R: introducing the gsl package}
 \Shorttitle{The \pkg{gsl} package}
 
