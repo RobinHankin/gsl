@@ -47,7 +47,7 @@ hyperg_2F0(a, b, x, give=FALSE, strict=TRUE)
 
   There is a known issue in \code{hyperg_2F1()} in GSL-2.6,
   \url{http://savannah.gnu.org/bugs/?54998} and the package returns the
-  erroneous value.
+  erroneous value given by GSL.
  
   }
 \examples{
