@@ -44,6 +44,11 @@ hyperg_2F0(a, b, x, give=FALSE, strict=TRUE)
 \note{
   \dQuote{The circle of convergence of the Gauss hypergeometric series
     is the unit circle \eqn{|z|=1}{|z|=1}} (AMS, page 556).
+
+  There is a known issue in \code{hyperg_2F1()} in GSL-2.6,
+  \url{http://savannah.gnu.org/bugs/?54998} and the package returns the
+  erroneous value.
+ 
   }
 \examples{
 
