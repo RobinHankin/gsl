@@ -58,8 +58,9 @@ features.
 Here I introduce \pkg{gsl}, an \proglang{R} package that allows direct
 access to many GSL functions, including all the special functions,
 from within an \proglang{R} session.  The package is available on
-CRAN, \url{http://www.cran.r-project.org/}; the GSL is available at
-\url{http://www.gnu.org/software/gsl/}.
+CRAN, \url{http://www.cran.r-project.org/} and github,
+\url{https://github.com/RobinHankin/gsl}; the GSL itself is available
+at \url{http://www.gnu.org/software/gsl/}.
 
 \section{Package design philosophy}
 
@@ -217,7 +218,7 @@ form.   Here, I consider a potential of the form
 \begin{equation}\label{potential}
 V(r) = \left\{\begin{array}{ll}
 r & \mbox{if~$r>0$}\\
-\infty & \mbox{if~$r\leq 0$}\\
+\infty & \mbox{if~$r\leq 0$.}\\
 \end{array}
 \right.
 \end{equation}
