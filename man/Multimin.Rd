@@ -116,22 +116,25 @@ of the following items:
 \note{The source code for the functions documented here conditionalizes
   on \code{WIN32}; under windows there is a slight memory leak.}
 \examples{
+
+# COMMENTED OUT PENDING PERMANENT FIX
 # The Rosenbrock function:
-\donttest{
-x0 <- c(-1.2, 1)
-f <- function(x) (1 - x[1])^2 + 100 * (x[2] - x[1]^2)^2
-df <- function(x) c(-2*(1 - x[1]) + 100 * 2 * (x[2] - x[1]^2) * (-2*x[1]),
-                    100 * 2 * (x[2] - x[1]^2))
 
-# The simple way to call multimin.
-state <- multimin(x0, f, df)
-print(state$x)
+# x0 <- c(-1.2, 1)
+# f <- function(x) (1 - x[1])^2 + 100 * (x[2] - x[1]^2)^2
+# df <- function(x) c(-2*(1 - x[1]) + 100 * 2 * (x[2] - x[1]^2) * (-2*x[1]),
+#                     100 * 2 * (x[2] - x[1]^2))
+# 
+# # The simple way to call multimin.
+# state <- multimin(x0, f, df)
+# print(state$x)
+# 
+# # The fine-control way to call multimin.
+# state <- multimin.init(x0, f, df, method="conjugate-fr")
+# for (i in 1:200)
+# 	state <- multimin.iterate(state)
+# print(state$x)
 
-# The fine-control way to call multimin.
-state <- multimin.init(x0, f, df, method="conjugate-fr")
-for (i in 1:200)
-	state <- multimin.iterate(state)
-print(state$x)
 }
-}
+
 \keyword{array}
