@@ -41,6 +41,8 @@
 \SweaveOpts{echo=FALSE}
 \begin{document}
 
+\hfill\includegraphics[width=1in]{\Sexpr{system.file("help/figures/gsl.png",package="gsl")}}
+
 \section{Introduction}
 
 The Gnu Scientific Library (GSL) is a collection of numerical routines
