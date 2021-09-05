@@ -133,7 +133,7 @@ bessel_zero_Jnu(nu, s, give=FALSE, strict=TRUE)
 \details{All as for the \acronym{GSL} reference manual section 7.5
 }
 \author{Robin K. S. Hankin}
-\references{\url{http://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl}}
 \examples{
 
 # Compare native R routine with GSL:

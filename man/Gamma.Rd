@@ -80,7 +80,7 @@ beta_inc(a,b,x,give=FALSE,strict=TRUE)
   pgamma(5, 1.8)} to numerical accuracy.
 
 }
-\references{\url{http://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \examples{
 gsl_sf_gamma(3)

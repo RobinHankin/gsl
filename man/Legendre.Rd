@@ -78,7 +78,7 @@ legendre_H3d_array(lmax, lambda, eta, give=FALSE, strict=TRUE)
     if nonzero status is returned by the \acronym{GSL} function (\code{FALSE}
     means to return the value: use with caution)}
 }
-\references{\url{http://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \examples{
  theta <- seq(from=0,to=pi/2,len=100)

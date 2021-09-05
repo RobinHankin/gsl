@@ -39,14 +39,14 @@ hyperg_2F0(a, b, x, give=FALSE, strict=TRUE)
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
     if status is an error}
 }
-\references{\url{http://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \note{
   \dQuote{The circle of convergence of the Gauss hypergeometric series
     is the unit circle \eqn{|z|=1}{|z|=1}} (AMS, page 556).
 
   There is a known issue in \code{hyperg_2F1()} in GSL-2.6,
-  \url{http://savannah.gnu.org/bugs/?54998} and the package returns the
+  \url{https://savannah.gnu.org/bugs/?54998} and the package returns the
   erroneous value given by GSL.
  
   }

@@ -49,7 +49,7 @@ are deprecated.  This functionality is now provided in GSL by the
 }
 
   
-\references{\url{http://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \seealso{\code{\link{Legendre}}}
 \keyword{array}

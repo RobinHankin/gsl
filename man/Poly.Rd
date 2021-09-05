@@ -32,7 +32,7 @@ gsl_poly(c_gsl,x)
   This section is work-in-progress and more will be added when I have
   the time/need for the other functions here.  
   }
-\references{\url{http://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \examples{
 a <- matrix(1:4,2,2)

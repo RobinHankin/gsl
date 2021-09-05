@@ -61,7 +61,7 @@ airy_zero_Bi_deriv(n, give=FALSE, strict=TRUE)
 
   An example is given in the package vignette.
   }
-\references{\url{http://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \examples{
 
