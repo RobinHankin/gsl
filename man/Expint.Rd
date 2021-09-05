@@ -42,7 +42,7 @@ atanint(x, give=FALSE, strict=TRUE)
   Function \code{expint_En()} requires \acronym{GSL} version 1.8 or later.
   
 }
-\references{\url{https://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl/}}
 \author{Robin K. S. Hankin}
 \examples{
 x <- seq(from=0.5, to=1, by=0.01)

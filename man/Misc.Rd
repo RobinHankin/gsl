@@ -65,6 +65,6 @@ strictify(val,status)
     \code{R CMD INSTALL gsl}
 }
 }
-\references{\url{https://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl/}}
 \author{Robin K. S. Hankin}
 \keyword{array}

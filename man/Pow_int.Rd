@@ -19,7 +19,7 @@ pow_int(x, n, give=FALSE, strict=TRUE)
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
     if status is an error}
 }
-\references{\url{https://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl/}}
 \author{Robin K. S. Hankin}
 \examples{
 pow_int(pi/2,1:10)   

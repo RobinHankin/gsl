@@ -52,7 +52,7 @@ gsl_dc(z,m)
 
   Function \code{sn_cn_dn()} is not really intended for the end-user.
 }
-\references{\url{https://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl/}}
 \author{Robin K. S. Hankin}
 \examples{
 

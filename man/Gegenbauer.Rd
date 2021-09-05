@@ -26,7 +26,7 @@ gegenpoly_array(nmax,lambda, x, give=FALSE,strict=TRUE)
     items: the value, an estimate of the error, and a status number}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
     if status is an error}}
-\references{\url{https://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl/}}
 \author{Robin K. S. Hankin}
 \examples{
 

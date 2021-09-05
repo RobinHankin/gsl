@@ -28,7 +28,7 @@ psi_n(m, x, give=FALSE, strict=TRUE)
   \item{strict}{Boolean, with default \code{TRUE} meaning to return \code{NaN}
     if status is an error}
 }
-\references{\url{https://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl/}}
 \author{Robin K. S. Hankin}
 \examples{
 

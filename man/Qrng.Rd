@@ -30,7 +30,7 @@ qrng_get(q, n = 1)
 }
 \details{
     These are wrappers for the quasi-random sequence
-functions from the \acronym{GSL} \url{https://www.gnu.org/software/gsl} with
+functions from the \acronym{GSL} \url{https://www.gnu.org/software/gsl/} with
 arguments corresponding to those from the library, with a few exceptions.
 In particular:  I have used \code{dim} where the \acronym{GSL} uses just \code{d};
 I have added the \code{n} argument to the \code{qrng_get} function, so that
@@ -52,7 +52,7 @@ usage of the generator.
   \code{qrng_get} returns a matrix with \code{n} rows and \code{dim} columns.
 Each row is a vector in the quasi-random sequence.
 }
-\references{ \url{https://www.gnu.org/software/gsl} }
+\references{ \url{https://www.gnu.org/software/gsl/} }
 \author{ Duncan Murdoch }
 \examples{
 q <- qrng_alloc(dim = 2)

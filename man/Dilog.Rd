@@ -30,7 +30,7 @@ complex_dilog(r, theta, give=FALSE, strict=TRUE)
 }
 \details{All functions as documented in the \acronym{GSL} reference manual section
   7.11.}
-\references{\url{https://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl/}}
 \author{Robin K. S. Hankin}
 \examples{
 

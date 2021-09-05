@@ -94,7 +94,7 @@ of the following items:
   \item{is.fdf}{TRUE if the algorithm is using a derivative}
   \item{code}{The \acronym{GSL} return code from the last iteration}
 }
-\references{\url{https://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl/}}
 \seealso{
   \code{optim} and \code{nlm} are the standard optimization functions in
   R.

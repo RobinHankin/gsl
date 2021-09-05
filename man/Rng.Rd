@@ -43,7 +43,7 @@ rng_uniform_pos(r, length)
 }
 \details{
 	These are wrappers for the random number generator
-functions from the \acronym{GSL} \url{https://www.gnu.org/software/gsl} with
+functions from the \acronym{GSL} \url{https://www.gnu.org/software/gsl/} with
 arguments corresponding to those from the library.
 Calling \code{rng_free} is not necessary as R performs garbage
 collection automatically.
@@ -57,7 +57,7 @@ random numbers to be returned.
   Function \code{rng_alloc()} returns an external pointer to a \acronym{GSL} random
   number generator.
 }
-\references{\url{https://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl/}}
 \author{Max Bruche}
 \examples{
 r <- rng_alloc("cmrg")

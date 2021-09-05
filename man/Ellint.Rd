@@ -39,7 +39,7 @@ ellint_RJ(x, y, z, p, mode=0, give=FALSE,strict=TRUE)
     \code{GSL_PREC_SINGLE}, \code{GSL_PREC_APPROX} use \code{0,1,2}
     respectively.}
 }
-\references{\url{https://www.gnu.org/software/gsl}}
+\references{\url{https://www.gnu.org/software/gsl/}}
 \author{Robin K. S. Hankin}
 \examples{
 ellint_Kcomp(0.3)
