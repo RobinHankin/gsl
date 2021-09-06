@@ -3,6 +3,7 @@ library("gsl")
 
 
 bmp(file="wrapper.bmp",bg="#7733FF")
+par(mar=c(5,2,4,2)+0.1)
 x <- seq(from=-pi,to=pi,len=400)
 plot(x,cos(x),asp=1,type="l",lwd=10,axes=FALSE,xlab="",ylab="")
 
