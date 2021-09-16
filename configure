@@ -2656,7 +2656,7 @@ rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
 fi
 
 if test "${gsl_version_ok}" = no; then
-  as_fn_error $? "Need GSL version >= 1.16" "$LINENO" 5
+  as_fn_error $? "Need GSL version >= 2.5" "$LINENO" 5
 else
   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 $as_echo "yes" >&6; }

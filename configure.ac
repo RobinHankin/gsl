@@ -47,7 +47,7 @@ int main() {
 [gsl_version_ok=no],
 [gsl_version_ok=yes])
 if test "${gsl_version_ok}" = no; then
-  AC_MSG_ERROR([Need GSL version >= 1.16])
+  AC_MSG_ERROR([Need GSL version >= 2.5])
 else
   AC_MSG_RESULT([yes])
 fi
