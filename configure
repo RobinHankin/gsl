@@ -1829,8 +1829,8 @@ else
    as_fn_error $? "gsl-config not found, is GSL installed?" "$LINENO" 5
 fi
 
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking if GSL version >= 2.1" >&5
-$as_echo_n "checking if GSL version >= 2.1... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking if GSL version >= 2.5" >&5
+$as_echo_n "checking if GSL version >= 2.5... " >&6; }
 ac_ext=c
 ac_cpp='$CPP $CPPFLAGS'
 ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'

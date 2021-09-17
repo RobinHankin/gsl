@@ -23,7 +23,7 @@ else
    AC_MSG_ERROR([gsl-config not found, is GSL installed?])
 fi
 
-AC_MSG_CHECKING([if GSL version >= 2.1])
+AC_MSG_CHECKING([if GSL version >= 2.5])
 AC_RUN_IFELSE([AC_LANG_SOURCE([[
 #include <string.h>
 #include <gsl/gsl_version.h>

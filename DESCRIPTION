@@ -5,7 +5,7 @@ Title: Wrapper for the Gnu Scientific Library
 Authors@R: c(person(given=c("Robin", "K. S."), family="Hankin", role = c("aut","cre"), email="hankin.robin@gmail.com", comment = c(ORCID = "0000-0001-5982-0415")),
              person(given="Andrew",family="Clausen",role="ctb",comment="multimin functionality"),
              person(given="Duncan",family="Murdoch",role="ctb",comment="qrng functions"))
-SystemRequirements: Gnu Scientific Library version >= 2.1
+SystemRequirements: Gnu Scientific Library version >= 2.5
 Description: 
  An R wrapper for some of the functionality of the
  Gnu Scientific Library.
