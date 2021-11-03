@@ -4,3 +4,6 @@
 README.Rmd
 README.html
 ^\.travis\.yml$
+inst/gsl.png
+inst/gsl_stickermaker.R
+inst/wrapper.bmp
