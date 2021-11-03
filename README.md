@@ -48,4 +48,4 @@ https://www.gnu.org/software/gsl/
 For more detail on package structure and design philosophy, see the
 package vignette
 
-`vignette("gslpaper")`
+`vignette("gsl")`
