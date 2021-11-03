@@ -13,3 +13,9 @@ Maintainer: Robin K. S. Hankin <hankin.robin@gmail.com>
 License: GPL-3
 URL: https://github.com/RobinHankin/gsl
 BugReports: https://github.com/RobinHankin/gsl/issues
+NeedsCompilation: yes
+Author: Robin K. S. Hankin [aut, cre] (<https://orcid.org/0000-0001-5982-0415>),
+  Andrew Clausen [ctb] (multimin functionality),
+  Duncan Murdoch [ctb] (qrng functions)
+Repository: CRAN
+Date/Publication: 2019-03-25 09:10:03 UTC

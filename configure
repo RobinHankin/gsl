@@ -2199,8 +2199,8 @@ else
    as_fn_error $? "gsl-config not found, is GSL installed?" "$LINENO" 5
 fi
 
-{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking if GSL version >= 2.1" >&5
-printf %s "checking if GSL version >= 2.1... " >&6; }
+{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking if GSL version >= 2.5" >&5
+printf %s "checking if GSL version >= 2.5... " >&6; }
 
 
 
