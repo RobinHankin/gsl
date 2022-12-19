@@ -2,7 +2,13 @@ The gsl R package is a wrapper for the GSL C library (note capitalization).
 
 Installing gsl from source requires you to download and install GSL
 first.  Ensure that you can compile and run a simple test program such
-as the example program near the start of the gsl Reference Manual.
+as the example program near the start of the GSL Reference Manual.
+
+You will need at least GSL version 2.5: using earlier versions will
+give errors such as
+
+error: too few arguments to function 'gsl_sf_ellint_D_e'
+
 
 Some linux users report that is is possoble to go to the Ubuntu
 Software Center and install "GNU Scientific Library (GSL) --

@@ -33,8 +33,8 @@ at the R command prompt.
 # Installation from source
 
 Installing the gsl R package from source requires you to install the
-GSL C library first.  *Over 99.9% of reports to me about gsl are due
-to people not understanding what this means*.
+GSL C library first.  *About 80% of reports to me about gsl are due to
+people not understanding what this means*.
 
 Before reporting any "bugs", ensure that you can compile and run a
 simple test program such as the example program near the start of the
@@ -42,6 +42,13 @@ GSL Reference Manual.  It is not the purpose of this document to show
 people how to install GSL: for this, visit
 https://www.gnu.org/software/gsl/
 
+You will need at least GSL version 2.5: using earlier versions
+generally gives errors such as
+
+error: too few arguments to function 'gsl_sf_ellint_D_e'
+
+*About 20% of reports to me about gsl are due to an insufficient
+version of GSL*.
 
 # Further information
 
