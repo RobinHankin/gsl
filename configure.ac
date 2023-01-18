@@ -1,6 +1,17 @@
 
 AC_INIT
+
+# Ensure C++ is set up as R expects
+: ${R_HOME=`R RHOME`}
+if test -z "${R_HOME}"; then
+    AC_MSG_ERROR([Could not determine R_HOME.])
+fi
+CC=`"${R_HOME}/bin/R" CMD config CC`
+CFLAGS=`"${R_HOME}/bin/R" CMD config CFLAGS`
+AC_PROG_CC
+
 AC_CONFIG_SRCDIR([src/airy.c])
+
 
 #AC_CHECK_LIB(gsl, gsl_sf_airy_Ai_e,
 #             [LIBS="${LIBS} -lgsl -lgslcblas"], 
