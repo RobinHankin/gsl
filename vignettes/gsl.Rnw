@@ -30,9 +30,6 @@
 \Address{
   Robin K. S. Hankin\\
   Auckland University of Technology\\
-  AUT Tower\\
-  Wakefield Street\\
-  Auckland\\
   New Zealand\\
   E-mail: \email{hankin.robin@gmail.com}
 }
