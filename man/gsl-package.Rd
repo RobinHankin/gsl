@@ -21,7 +21,7 @@ The DESCRIPTION file:
   conflicts (viz \code{gsl_sf_sin()}, \code{gsl_sf_cos()},
   \code{gsl_sf_gamma()}, \code{gsl_sf_ choose()}, \code{gsl_sf_beta()}).
 
-  \R\ function arguments have the same names as in the \acronym{GSL} reference 
+  \R function arguments have the same names as in the \acronym{GSL} reference 
   manual, except for the quasirandom functions documented in the
   \code{Qrng} manpage.
 

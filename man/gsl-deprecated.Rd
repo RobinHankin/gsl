@@ -35,7 +35,7 @@ deprecated_legendre(...)
   }
 
 are deprecated.  This functionality is now provided in GSL by the
-\code{gsl_sf_legendre_array} suite of functions; in R, use one of:
+\code{gsl_sf_legendre_array} suite of functions; in \R, use one of:
 
 \itemize{
 \item\code{legendre_array()}
