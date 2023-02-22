@@ -4,10 +4,7 @@ citEntry(entry = "Article",
 	 title = {
              paste("Special functions in R: introducing the gsl package")
 	     },
-	 author = personList(
-         person(given = c("Robin", "K. S."),
-		family = "Hankin",
-		email="hankin.robin@gmail.com")),
+	 author = person("Robin", "K. S. Hankin"),
 	 journal = "R News",
          year = "2006",
 	 month = "October",
@@ -21,5 +18,3 @@ citEntry(entry = "Article",
 		   "6(4)"
 		   )
          })
-
-

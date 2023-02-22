@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Hankin"
+  given-names: "Robin K. S."
+  orcid: "https://orcid.org/0000-0001-5982-0415"
+title: "Special functions in R: introducing the gsl package"
+version: 2.0-1
+url: "https://github.com/RobinHankin/gsl"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Hankin"
+    given-names: "Robin K. S."
+    orcid: "https://orcid.org/0000-0001-5982-0415"
+  journal: "R News"
+  title: "Special functions in R: introducing the gsl package"
+  volume: 6
+  issue: 4
+  year: 2006
