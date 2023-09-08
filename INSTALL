@@ -18,3 +18,17 @@ If the gsl R package builds successfully but will not load, make sure
 to inform your system linker/loader where to find the GSL libraries
 used to compile it.  That step may be missed when using a manual GSL
 installation as opposed to one performed by a package manager.
+
+One common problem when installing from source is that the system
+cannot find "gsl-config".  Typically, install.packages() reports
+something like
+
+checking for gsl-config... no
+configure: error: gsl-config not found, is GSL installed?
+ERROR: configuration failed for package 'gsl'
+
+On unix-type systems, "which gsl-config" locates the file gsl-config;
+ensure that the $PATH environment variable includes the directory
+where gsl-config is held.  Usually, this is not necessary with default
+settings, but many users wish to work with GSL files which are
+installed in a non-standard location.
