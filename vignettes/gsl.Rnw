@@ -29,8 +29,8 @@
 
 \Address{
   Robin K. S. Hankin\\
-  Auckland University of Technology\\
-  New Zealand\\
+  University of Stirling\\
+  Scotland\\
   E-mail: \email{hankin.robin@gmail.com}
 }
 
