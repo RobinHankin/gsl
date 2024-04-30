@@ -1,5 +1,5 @@
 Package: gsl
-Version: 2.1-8
+Version: 2.1-9
 Depends: R (>= 4.0.0)
 Title: Wrapper for the Gnu Scientific Library
 Authors@R: c(person(given=c("Robin", "K. S."), family="Hankin", role = c("aut","cre"), email="hankin.robin@gmail.com", comment = c(ORCID = "0000-0001-5982-0415")),
@@ -18,4 +18,3 @@ Author: Robin K. S. Hankin [aut, cre] (<https://orcid.org/0000-0001-5982-0415>),
   Andrew Clausen [ctb] (multimin functionality),
   Duncan Murdoch [ctb] (qrng functions)
 Repository: CRAN
-Date/Publication: 2019-03-25 09:10:03 UTC
