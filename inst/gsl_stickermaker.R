@@ -9,7 +9,7 @@ x <- seq(from=-pi,to=pi,len=400)
 plot(x,-cos(x),asp=1,type="l",lwd=10,axes=FALSE,xlab="",ylab="")
 xx <- x[abs(cos(x))<0.15]
 
-points(xx,cos(xx),asp=1,type="l",lwd=20,col="#7733FF")
+points(xx,cos(xx),asp=1,type="l",lwd=30,col="#7733FF")
 
 points(x,cos(x),asp=1,type="l",lwd=10)
 
