@@ -42,7 +42,6 @@ jobs:
 
       - run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc-citeproc
 
       - uses: r-lib/actions/check-r-package@v2
         with:
