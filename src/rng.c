@@ -5,12 +5,12 @@
 #include <Rdefines.h>
 
 static void rng_cleanup(SEXP r) {
-	gsl_rng_free((gsl_rng*)EXTPTR_PTR(r));
+	gsl_rng_free((gsl_rng*)R_ExternalPtrAddr(r));
 }
 
 gsl_rng* get_rng_from_sexp(SEXP rng) {
 	gsl_rng* gen = NULL;
-	if (TYPEOF(rng) != EXTPTRSXP || !(gen = (gsl_rng*)EXTPTR_PTR(rng))) {
+	if (TYPEOF(rng) != EXTPTRSXP || !(gen = (gsl_rng*)R_ExternalPtrAddr(rng))) {
 		error("not a random number generator");
 	}
 	/* if gen is NULL here, this will probably cause a segfault */
@@ -96,7 +96,7 @@ SEXP rng_clone(SEXP r) {
 	gen = get_rng_from_sexp(r);
 	
 	result = R_MakeExternalPtr(gsl_rng_clone(gen),
-				   PROTECT(duplicate(EXTPTR_TAG(r))), R_NilValue);
+				   PROTECT(duplicate(R_ExternalPtrTag(r))), R_NilValue);
 	UNPROTECT(1);
 	R_RegisterCFinalizer(result, rng_cleanup);
 

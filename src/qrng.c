@@ -10,7 +10,7 @@
 
 static void cleanup(SEXP r)
 {
-	gsl_qrng_free((gsl_qrng*)EXTPTR_PTR(r));
+	gsl_qrng_free((gsl_qrng*)R_ExternalPtrAddr(r));
 }
 	
 SEXP qrng_alloc(SEXP type, SEXP dimension) 
@@ -40,10 +40,10 @@ SEXP qrng_clone(SEXP r)
 	SEXP result;
 	gsl_qrng *gen = NULL;
 	
-	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)EXTPTR_PTR(r))) 
+	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)R_ExternalPtrAddr(r))) 
 		error("not a QRNG generator");
 	result = R_MakeExternalPtr(gsl_qrng_clone(gen),
-				   PROTECT(duplicate(EXTPTR_TAG(r))), R_NilValue);
+				   PROTECT(duplicate(R_ExternalPtrTag(r))), R_NilValue);
 	UNPROTECT(1);
 	R_RegisterCFinalizer(result, cleanup);
 	return result;
@@ -53,7 +53,7 @@ SEXP qrng_init(SEXP r)
 {
 	gsl_qrng *gen = NULL;
 	
-	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)EXTPTR_PTR(r))) 
+	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)R_ExternalPtrAddr(r))) 
 		error("not a QRNG generator");
 	gsl_qrng_init(gen);
 	return r;
@@ -63,7 +63,7 @@ SEXP qrng_name(SEXP r)
 {
 	gsl_qrng *gen = NULL;
 	
-	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)EXTPTR_PTR(r))) 
+	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)R_ExternalPtrAddr(r))) 
 		error("not a QRNG generator");
 	return mkString(gsl_qrng_name(gen));
 }
@@ -72,7 +72,7 @@ SEXP qrng_size(SEXP r)
 {
 	gsl_qrng *gen = NULL;
 	
-	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)EXTPTR_PTR(r))) 
+	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)R_ExternalPtrAddr(r))) 
 		error("not a QRNG generator");
 		
 	return ScalarInteger(gsl_qrng_size(gen));
@@ -82,7 +82,7 @@ SEXP qrng_state(SEXP r)
 {
 	gsl_qrng *gen = NULL;
 	
-	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)EXTPTR_PTR(r))) 
+	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)R_ExternalPtrAddr(r))) 
 		error("not a QRNG generator");
 		
 	return R_MakeExternalPtr(gsl_qrng_state(gen),
@@ -95,10 +95,10 @@ SEXP qrng_get(SEXP r)
 	gsl_qrng *gen = NULL;
 	int dim;
 	
-	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)EXTPTR_PTR(r))) 
+	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)R_ExternalPtrAddr(r))) 
 		error("not a QRNG generator");
 		
-	dim = asInteger(EXTPTR_TAG(r));	
+	dim = asInteger(R_ExternalPtrTag(r));	
 	result = PROTECT(NEW_NUMERIC(dim));
 	if (gsl_qrng_get(gen, REAL(result)) != GSL_SUCCESS)
 		error("QRNG generator failed");
@@ -113,10 +113,10 @@ SEXP get_n(SEXP r, SEXP n)
 	double *value;
 	int i, dim, num = asInteger(n);
 	
-	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)EXTPTR_PTR(r)))
+	if (TYPEOF(r) != EXTPTRSXP || !(gen = (gsl_qrng*)R_ExternalPtrAddr(r)))
 		error("not a QRNG generator");
 		
-	dim = asInteger(EXTPTR_TAG(r));	
+	dim = asInteger(R_ExternalPtrTag(r));	
 	result = PROTECT(NEW_NUMERIC(dim*num));
 	value = REAL(result);
 	
