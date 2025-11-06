@@ -240,23 +240,6 @@ extern void zetam1(void *, void *, void *, void *, void *);
 extern void zetam1_int(void *, void *, void *, void *, void *);
 
 /* .Call calls */
-extern SEXP get_n(SEXP, SEXP);
-extern SEXP qrng_alloc(SEXP, SEXP);
-extern SEXP qrng_clone(SEXP);
-extern SEXP qrng_init(SEXP);
-extern SEXP qrng_name(SEXP);
-extern SEXP qrng_size(SEXP);
-extern SEXP rng_alloc(SEXP);
-extern SEXP rng_clone(SEXP);
-extern SEXP rng_get(SEXP, SEXP);
-extern SEXP rng_max(SEXP);
-extern SEXP rng_min(SEXP);
-extern SEXP rng_name(SEXP);
-extern SEXP rng_set(SEXP, SEXP);
-extern SEXP rng_uniform(SEXP, SEXP);
-extern SEXP rng_uniform_int(SEXP, SEXP, SEXP);
-extern SEXP rng_uniform_pos(SEXP, SEXP);
-
 static const R_CMethodDef CEntries[] = {
     {"airy_Ai_deriv_e",           (DL_FUNC) &airy_Ai_deriv_e,            6},
     {"airy_Ai_deriv_scaled_e",    (DL_FUNC) &airy_Ai_deriv_scaled_e,     6},
@@ -491,28 +474,3 @@ static const R_CMethodDef CEntries[] = {
     {NULL, NULL, 0}
 };
 
-static const R_CallMethodDef CallEntries[] = {
-    {"get_n",           (DL_FUNC) &get_n,           2},
-    {"qrng_alloc",      (DL_FUNC) &qrng_alloc,      2},
-    {"qrng_clone",      (DL_FUNC) &qrng_clone,      1},
-    {"qrng_init",       (DL_FUNC) &qrng_init,       1},
-    {"qrng_name",       (DL_FUNC) &qrng_name,       1},
-    {"qrng_size",       (DL_FUNC) &qrng_size,       1},
-    {"rng_alloc",       (DL_FUNC) &rng_alloc,       1},
-    {"rng_clone",       (DL_FUNC) &rng_clone,       1},
-    {"rng_get",         (DL_FUNC) &rng_get,         2},
-    {"rng_max",         (DL_FUNC) &rng_max,         1},
-    {"rng_min",         (DL_FUNC) &rng_min,         1},
-    {"rng_name",        (DL_FUNC) &rng_name,        1},
-    {"rng_set",         (DL_FUNC) &rng_set,         2},
-    {"rng_uniform",     (DL_FUNC) &rng_uniform,     2},
-    {"rng_uniform_int", (DL_FUNC) &rng_uniform_int, 3},
-    {"rng_uniform_pos", (DL_FUNC) &rng_uniform_pos, 2},
-    {NULL, NULL, 0}
-};
-
-void R_init_gsl(DllInfo *dll)
-{
-    R_registerRoutines(dll, CEntries, CallEntries, NULL, NULL);
-    R_useDynamicSymbols(dll, FALSE);
-}
