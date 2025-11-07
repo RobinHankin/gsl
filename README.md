@@ -7,9 +7,8 @@ The gsl R package: a wrapper for the GSL C library
 <!-- badges: start -->
 
 [![Total Downloads](https://cranlogs.r-pkg.org/badges/grand-total/gsl)](https://CRAN.R-project.org/package=gsl)
-[![Build Status](https://travis-ci.org/RobinHankin/gsl.svg?branch=master)](https://travis-ci.org/RobinHankin/gsl)
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/gsl)](https://cran.r-project.org/package=gsl)
-[![Codecov test coverage](https://codecov.io/gh/RobinHankin/gsl/branch/master/graph/badge.svg)](https://codecov.io/gh/RobinHankin/gsl/branch/master)
+[![Codecov test coverage](https://app.codecov.io/gh/RobinHankin/gsl/branch/master/graph/badge.svg)](https://codecov.io/gh/RobinHankin/gsl/branch/master)
 <!-- badges: end -->
 
 The gsl R package is a wrapper for the GSL C library (note
