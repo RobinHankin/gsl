@@ -1,9 +1,7 @@
-citHeader("To cite in publications use:")
+citHeader("To cite the gsl package in publications use:")
 
-citEntry(entry = "Article",
-	 title = {
-             paste("Special functions in R: introducing the gsl package")
-	     },
+bibentry(bibtype = "Article",
+	 title = "{Special functions in R: introducing the gsl package}",
 	 author = person("Robin", "K. S. Hankin"),
 	 journal = "R News",
          year = "2006",
