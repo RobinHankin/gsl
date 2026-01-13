@@ -240,7 +240,8 @@
 }  
 
 "airy_zero_Ai" <- function(n, give=FALSE, strict=TRUE){
-  n.vec <- as.vector(pmax(n,1))
+  n[n < 1] <- 1
+  n.vec <- as.vector(n)
   attr <- attributes(n)
   jj <- .C("airy_zero_Ai_e",
            as.integer(n.vec),
@@ -271,7 +272,8 @@
 } 
 
 "airy_zero_Bi" <- function(n, give=FALSE, strict=TRUE){
-  n.vec <- as.vector(pmax(n,1))
+  n[n < 1] <- 1
+  n.vec <- as.vector(n)
   attr <- attributes(n)
   jj <- .C("airy_zero_Bi_e",
            as.integer(n.vec),
@@ -302,7 +304,8 @@
 } 
 
 "airy_zero_Ai_deriv" <- function(n, give=FALSE, strict=TRUE){
-  n.vec <- as.vector(pmax(n,1))
+  n[n < 1] <- 1
+  n.vec <- as.vector(n)
   attr <- attributes(n)
   jj <- .C("airy_zero_Ai_deriv_e",
            as.integer(n.vec),
@@ -333,7 +336,8 @@
 } 
 
 "airy_zero_Bi_deriv" <- function(n, give=FALSE, strict=TRUE){
-  n.vec <- as.vector(pmax(n,1))
+  n[n < 1] <- 1
+  n.vec <- as.vector(n)
   attr <- attributes(n)
   jj <- .C("airy_zero_Bi_deriv_e",
            as.integer(n.vec),
