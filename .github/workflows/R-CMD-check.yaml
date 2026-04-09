@@ -11,12 +11,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  check:
-    strategy:
-      matrix:
-        r-version: [release, oldrel]
-
+  check-release:
     uses: robinhankin/workflow/.github/workflows/R-CMD-check.yaml@master
-
     with:
-      r-version: ${{ matrix.r-version }}
+      r-version: "release"
+
+  check-oldrel:
+    uses: robinhankin/workflow/.github/workflows/R-CMD-check.yaml@master
+    with:
+      r-version: "oldrel"
