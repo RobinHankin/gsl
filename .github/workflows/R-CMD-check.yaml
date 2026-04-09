@@ -5,12 +5,18 @@ name: R-CMD-check-gsl
 
 on:
   push:
-    branches: [ master]
+    branches: [ master ]
   pull_request:
-    branches: [ master]
+    branches: [ master ]
   workflow_dispatch:
-
 
 jobs:
   check:
+    strategy:
+      matrix:
+        r-version: [release, oldrel]
+
     uses: robinhankin/workflow/.github/workflows/R-CMD-check.yaml@master
+
+    with:
+      r-version: ${{ matrix.r-version }}
