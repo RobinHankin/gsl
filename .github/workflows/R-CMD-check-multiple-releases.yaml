@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        r-version: [release, oldrel]
+        r-version: [release, oldrel, devel]
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
