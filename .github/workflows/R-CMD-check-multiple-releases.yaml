@@ -10,7 +10,6 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
-    continue-on-error: ${{ matrix.r-version == 'oldrel' }}
 
     strategy:
       fail-fast: false
@@ -41,7 +40,8 @@ jobs:
         uses: r-lib/actions/check-r-package@v2
         with:
           upload-snapshots: true
-          build_args: 'c("--compact-vignettes=both")'
+          build_args: ${{ matrix.r-version == 'oldrel' && 'c("--no-build-vignettes")' || 'c("--compact-vignettes=both")' }}
+          args: ${{ matrix.r-version == 'oldrel' && 'c("--no-manual", "--as-cran", "--ignore-vignettes")' || 'c("--no-manual", "--as-cran")' }}
 
       - name: Upload check results
         if: failure()
@@ -49,3 +49,4 @@ jobs:
         with:
           name: check-results-${{ matrix.r-version }}
           path: check
+	  
