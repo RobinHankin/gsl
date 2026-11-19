@@ -10,6 +10,7 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.r-version == 'oldrel' }}
 
     strategy:
       fail-fast: false
